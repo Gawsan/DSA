@@ -50,7 +50,15 @@ public class stack {
     public static void main(String [] args){
         stack App=new stack(10);
 
+        App.push(20);
+        App.push(30);
+        App.push(20);
+        App.push(25);
+        App.push(15);
 
+        while(!App.isEmpty()){
+            System.out.print(App.pop()+" ");
+        }
 
 
     }
