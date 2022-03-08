@@ -60,7 +60,6 @@ public class stack {
             System.out.print(App.pop()+" ");
         }
 
-
     }
 
     }
