@@ -17,19 +17,17 @@ public class circulaeQue {
             nItems=0;
         }
         public void insert(int num){
-            if(rear==maxSize-1){
-                System.out.println("Queue is full");
-            }
-            else{
+
                 //circular que
                 //current rear maximum then we need to made -1
-                if(rear==maxSize-1){
-                    rear=-1;
+                if(rear==maxSize-1) {
+                    rear = -1;
                 }
+
+                    queArray[++rear] = num;
+                    nItems++;
                 }
-                queArray[++rear]=num;
-                nItems++;
-            }
+
         public int remove(){
             if(nItems==0){
                 System.out.println("Queue is empty...");
@@ -56,7 +54,7 @@ public class circulaeQue {
             return(nItems==0);
         }
         public boolean isFull(){
-            return (rear==maxSize-1);
+            return (nItems==maxSize);
         }
 
     }
