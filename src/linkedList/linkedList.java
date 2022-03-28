@@ -1,9 +1,12 @@
 package linkedList;
 
 public class linkedList {
+
+    //first link call itt as first
     private link first;
 
     public linkedList() {
+        //initially empty
         this.first = null;
     }
 
@@ -23,8 +26,9 @@ public class linkedList {
     }
 
     public boolean find(int id) {
+        //initially current is first
         link current = first;
-
+        //if not null
         while (current != null) {
             if (current.data == id) {
                 return true;
@@ -37,6 +41,9 @@ public class linkedList {
 
     public void insertFirst(int id) {
         link newLink = new link(id);
+        //need to check the concept
+        newLink.next=first;
+        //the change first as newlink
         first = newLink;
     }
 
@@ -57,10 +64,8 @@ public class linkedList {
         link temp = first;
         first = first.next;
         return temp;
-
     }
-
-    public link deleteMiddle(int id) {
-
-    }
+//    public link deleteMiddle(){
+//
+//    }
 }
